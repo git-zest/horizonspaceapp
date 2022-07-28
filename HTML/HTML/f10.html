@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space App Booking</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body style="background-color: rgb(184, 165, 119);" >
+    <div ng-controller="bookingpage">
+      <div class="sidenav1">
+        <a href="/">Home</a>
+        <a href="/book">Book Online</a>
+        <a href="/transaction">Transaction</a>
+      </div>
+
+      <div>
+      <div style="margin-left:15%; margin-top:150px;" ng-if="session=='1'" >
+        <div class="tacbox">
+        <div>
+          <label ><b>The price is $150,000 per seat. </b></label>
+        </div>
+        <br/>
+        <input id="checkbox" type="checkbox" />
+        <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a>.</label>
+        <div> </div>
+        <br>
+          <Button class="w3-button w3-amber" ng-click="Navigate()">Proceed</button>
+        </br>
+      </div>
+    </div>
+    <div style="margin-left:15%; margin-top:100px;" ng-if="session=='2'" >
+      <div class="tacbox">
+        <div class="success-msg" ng-if="errormessage=='Success'">
+          <i class="fa fa-check"></i>
+          Added Payment method
+        </div>
+        <div class="success-msg" ng-if="errormessage=='PaymentSuccess'">
+          <i class="fa fa-check"></i>
+          Payment Successfull
+        </div>
+        <div class="success-msg" ng-if="errormessage=='PaymentFailure'">
+          <i class="fa fa-check"></i>
+          Payment Successfull
+        </div>
+        <div class="error-msg" ng-if="errormessage=='Error'">
+          <i class="fa fa-times-circle"></i>
+          Payment Method Failed.
+        </div>
+      <div>
+        <label ><b> Total Payable Amount:  </b></label>
+        <label> <b>${{amount}} </b></label>
+        <br/>
+        <div> Enter the country and currency which you want to pay </di>
+        <br/>
+        <select data-ng-model="status.country" ng-change="setcurrency(status.country)" name="statuss"
+          ng-options="status.country for status in country track by status.id" required>
+        </select>
+        <br/>
+        <br>
+        <Button class="w3-button w3-amber" ng-click="Proceed()">Proceed</button>
+        </br>
+      </div>
+      <br/>
+
+    </div>
+    <div ng-if="payment=='3'" >
+      <label ><b> Enter the Payment Details:  </b></label>
+      <br/>
+      <label for="fname">Account Number</label>
+      <input type="text" id="accountnumber" name="accountnumber" ng-model="acct" placeholder="Account Number..">
+      <label for="bcode">Bank Code</label>
+      <input type="text" id="bcode" name="bcode" ng-model="bcode" placeholder="Bank Code..">
+      <label for="code">Currency Code</label>
+      <input type="text" id="code" name="code" ng-model="code" placeholder="Currency.." disabled>
+      <label for="pper">Payment percentage in %</label>
+      <select data-ng-model="perc1.p" ng-change="setamount(perc1.p)" name="statuss"
+        ng-options="perc1.p for perc1 in percentage track by perc1.p" required>
+      </select>
+      <label for="Amount">Amount in above currency</label>
+      <input type="text" id="amt" name="amt" ng-model="amt" placeholder="Amount.." >
+      <Button class="w3-button w3-amber" ng-click="paynow()">Pay Now</button>
+    </div>
+    </div>
+
+  </div>
+
+
+
+    <div>
+
+
+    </div>
+
+
+
+
+    </div>
+
+  </body>
+</html>

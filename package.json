@@ -1,0 +1,43 @@
+{
+  "name": "datatable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "axios": "*",
+    "dotenv": "*",
+    "request": "*",
+    "body-parser": "^1.19.0",
+    "child-process-promise": "^2.2.0",
+    "child_process": "^1.0.2",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "crypto-js": "*",
+    "cryptr": "^6.0.2",
+    "detect-node": "^2.0.4",
+    "express": "^4.17.1",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "find": "^0.2.9",
+    "jenkins": "*",
+    "logger": "*",
+    "mongodb": "^3.5.3",
+    "mongoose": "^5.12.0",
+    "multer": "^1.3.0",
+    "node-child-pm": "^1.1.0",
+    "nodemon": "^2.0.3",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "thread-sleep": "*",
+    "util": "^0.12.3"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space App Booking</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body style="background-color: rgb(184, 165, 119);" >
+    <div ng-controller="transactionpage">
+      <div class="sidenav1">
+        <a href="/">Home</a>
+        <a href="/book">Book Online</a>
+        <a href="/transaction">Transaction</a>
+      </div>
+
+      <div>
+        <div style="margin-left:10%; margin-top:90px;" >
+        <div class="tacbox">
+        <div>
+          <label ><b> Select country to get transaction </b></label>
+        </div>
+        <select data-ng-model="customer.countryfullname" ng-change="gettransaction(customer.countryfullname)" name="statuss"
+          ng-options="customer.countryfullname for customer in customerdetails track by customer.countryfullname" required>
+        </select>
+      </div>
+      <table class="table card-table table-vcenter text-nowrap datatable">
+        <thead>
+          <tr>
+            <th>Transaction Number <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <polyline points="7 8 3 12 7 16" />
+                <polyline points="17 8 21 12 17 16" />
+                <line x1="14" y1="4" x2="10" y2="20" />
+              </svg>
+            </th>
+            <th>Amount <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <polyline points="7 8 3 12 7 16" />
+                <polyline points="17 8 21 12 17 16" />
+                <line x1="14" y1="4" x2="10" y2="20" />
+              </svg>
+            </th>
+              <th>Currency <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <polyline points="7 8 3 12 7 16" />
+                <polyline points="17 8 21 12 17 16" />
+                <line x1="14" y1="4" x2="10" y2="20" />
+              </svg>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-ng-repeat="field in tabledetails track by $index">
+            <td><a  class="text-reset" tabindex="-1">{{tabledetails[$index].id}}</a></td>
+            <td>
+              {{tabledetails[$index].amount}}
+            </td>
+            <td>
+              {{tabledetails[$index].currency}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div>
+    </div>
+    </div>
+  </body>
+</html>

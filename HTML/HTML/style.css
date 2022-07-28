@@ -1,0 +1,223 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container1 {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(184, 165, 119);
+}
+
+.landing1 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(images/giphy.gif) no-repeat;
+  background-size: cover;
+  background-position: center top;
+  animation: landingAnim 4s forwards;
+}
+
+@keyframes landingAnim {
+  0%,
+  50% {
+    clip-path: polygon(50% 0, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0, 30% 0);
+  }
+
+  100% {
+    clip-path: polygon(
+      50% 4%,
+      70% 10%,
+      95% 0,
+      95% 87%,
+      5% 100%,
+      5% 15%,
+      31% 10%
+    );
+    background-position: center bottom;
+  }
+}
+
+.bg1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(184, 165, 119);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform-origin: top;
+  animation: bgAnim 2s forwards;
+}
+
+@keyframes bgAnim {
+  0%,
+  50% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+
+.sidenav1 {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav1 a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav1 a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main1 {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+  top: 200px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.tacbox {
+  display:block;
+  padding: 1em;
+  margin: 2em;
+  border: 3px solid #ddd;
+  background-color: #eee;
+  max-width: 1000px;
+
+}
+
+input {
+  height: 2em;
+  width: 2em;
+  vertical-align: middle;
+}
+/*
+label {
+  outline: 2px dotted #f00;
+}
+
+/*
+label:after {
+  content: attr(for);
+}*/
+/*
+label {
+  outline: 2px dotted #f00;
+}
+
+/*
+label:after {
+  content: attr(for);
+}*/
+
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+.info-msg,
+.success-msg,
+.warning-msg,
+.error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+.info-msg {
+  color: #059;
+  background-color: #BEF;
+}
+.success-msg {
+  color: #270;
+  background-color: #DFF2BF;
+}
+.warning-msg {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+.error-msg {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+/* Just for CodePen styling - don't include if you copy paste */
+html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  margin: 25px;
+}
+
+
+.container {
+  display: flex;
+}
+
+.img-container {
+  width: 5vw;
+  flex-grow: 10;
+  flex-basis: 10vw;
+  transition: width 1s ease-in-out;
+}
+
+.one {
+  flex-shrink: 10;
+  flex-basis: 85vw;
+}
+
+img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.img-container:hover {
+  width: 85vw;
+}
+
+.slider {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.slide {
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
