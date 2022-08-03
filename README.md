@@ -15,6 +15,6 @@ mongo_uri="mongodb://localhost:27017/rapyd"
 rapyd_wallet=""
 currency="USD"
 
-5. start NPM start app.js
+5. start NPM start 
 
 6. Open localhost:8085/
