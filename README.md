@@ -4,7 +4,7 @@
 2. Create DB - rapyd
 
 3. Create additonal collection with User values - 
-      Collection Name - clientDB - {"clientname":"McMike", "TotalPay":"Ammount which you want to pay"}
+      Collection Name - clientDB - {"clientname":"McMike", "TotalPay":"Total Amount"}
       
 4. Check .env provide the nessessary information
 
