@@ -2,15 +2,15 @@ var app = angular.module('homescreen', ['ngRoute','ngFileSaver','ui.bootstrap'])
 
 app.config(['$routeProvider','$locationProvider',function($routeProvider,$locationProvider){
 	$routeProvider.when('/',{
-		templateUrl: '/f1.html'
+		templateUrl: '/Base.html'
 	});
 
 	$routeProvider.when('/book',{
-		templateUrl: '/f10.html'
+		templateUrl: '/registration.html'
 	});
 
 	$routeProvider.when('/transaction',{
-		templateUrl: '/f100.html'
+		templateUrl: '/Transaction.html'
 	});
 
 	$routeProvider.otherwise({
