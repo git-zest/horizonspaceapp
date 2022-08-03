@@ -17,4 +17,4 @@ currency="USD"
 
 5. start NPM start app.js
 
-6. Open localhost:27017/
+6. Open localhost:8085/
